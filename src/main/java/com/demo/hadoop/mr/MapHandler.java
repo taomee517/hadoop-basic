@@ -1,4 +1,4 @@
-package com.demo.hadoop;
+package com.demo.hadoop.mr;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.hadoop.io.IntWritable;
