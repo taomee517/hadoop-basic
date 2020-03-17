@@ -12,9 +12,9 @@ public class HadoopLocalDriver {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         //放到线上执行需要，本地运行则改yarn为local
-        conf.set("mapreduce.framework.name", "yarn");
-        //指定resourcemanager的主机名
-        conf.set("yarn.resourcemanager.hostname", "hadoop1");
+        conf.set("mapreduce.framework.name", "local");
+//        //指定resourcemanager的主机名
+//        conf.set("yarn.resourcemanager.hostname", "hadoop1");
         Job job = Job.getInstance(conf);
 
         //设置驱动类
