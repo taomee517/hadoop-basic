@@ -8,11 +8,14 @@ import org.apache.hadoop.io.IOUtils;
 import java.io.InputStream;
 import java.net.URI;
 
+import static com.demo.hadoop.config.HadoopEnv.HDFS_PREFIX;
+
 public class GetDataFromHDFS {
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
         conf.set("mapreduce.framework.name", "local");
-        String uri = "hdfs://localhost:19000/hdfs/files/demo.txt";
+        conf.set("fs.defaultFS", HDFS_PREFIX);
+        String uri = "/hdfs/create/demo.txt";
         //拿到HDFS文件系统中的URI
         FileSystem fs = FileSystem.get(URI.create(uri), conf);
 

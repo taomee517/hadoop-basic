@@ -1,4 +1,4 @@
-package com.demo.hadoop.mr;
+package com.demo.hadoop.wordcount;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
