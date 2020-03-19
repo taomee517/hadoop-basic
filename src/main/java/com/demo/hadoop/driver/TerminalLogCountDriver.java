@@ -1,7 +1,7 @@
 package com.demo.hadoop.driver;
 
-import com.demo.hadoop.mapper.TerminalLogAnalysisMapper;
-import com.demo.hadoop.reducer.TerminalLogAnalysisReducer;
+import com.demo.hadoop.mapper.TerminalLogCountMapper;
+import com.demo.hadoop.reducer.TerminalLogCountReducer;
 import com.demo.hadoop.utils.FileUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -23,8 +23,8 @@ public class TerminalLogCountDriver {
         job.setJarByClass(TerminalLogCountDriver.class);
 
         //指定map reduce处理类
-        job.setMapperClass(TerminalLogAnalysisMapper.class);
-        job.setReducerClass(TerminalLogAnalysisReducer.class);
+        job.setMapperClass(TerminalLogCountMapper.class);
+        job.setReducerClass(TerminalLogCountReducer.class);
 
         //指定Mapper输出数据类型
         job.setMapOutputKeyClass(Text.class);

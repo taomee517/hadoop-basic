@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class TerminalLogSortedReducer extends Reducer<DeviceMsgCount, Text, Text, DeviceMsgCount> {
+public class TerminalLogSortReducer extends Reducer<DeviceMsgCount, Text, Text, DeviceMsgCount> {
     DeviceMsgCount outKey = new DeviceMsgCount();
     Text outValue = new Text();
 

@@ -1,8 +1,8 @@
 package com.demo.hadoop.driver;
 
 import com.demo.hadoop.beans.DeviceMsgCount;
-import com.demo.hadoop.mapper.TerminalLogSortedMapper;
-import com.demo.hadoop.reducer.TerminalLogSortedReducer;
+import com.demo.hadoop.mapper.TerminalLogSortMapper;
+import com.demo.hadoop.reducer.TerminalLogSortReducer;
 import com.demo.hadoop.utils.FileUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -24,8 +24,8 @@ public class TerminalLogSortDriver {
 
 
         //指定map reduce处理类
-        job.setMapperClass(TerminalLogSortedMapper.class);
-        job.setReducerClass(TerminalLogSortedReducer.class);
+        job.setMapperClass(TerminalLogSortMapper.class);
+        job.setReducerClass(TerminalLogSortReducer.class);
 
         //指定Mapper输出数据类型
         job.setMapOutputKeyClass(DeviceMsgCount.class);

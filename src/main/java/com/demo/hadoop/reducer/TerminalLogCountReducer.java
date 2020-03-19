@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class TerminalLogAnalysisReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+public class TerminalLogCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
     Text outKey = new Text();
     IntWritable outValue = new IntWritable();
 
