@@ -11,7 +11,7 @@
 
     <properties>
 <!--        <hadoop.version>3.2.1</hadoop.version>-->
-        <hadoop.version>2.9.1</hadoop.version>
+        <hadoop.version>2.10.1</hadoop.version>
     </properties>
 
 
